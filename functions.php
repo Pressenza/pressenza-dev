@@ -84,7 +84,7 @@ function add_to_context($data)
 add_action('wp_enqueue_scripts', 'load_scripts');
 function load_scripts()
 {
-    wp_enqueue_style('style', get_stylesheet_uri(), array(), '2.0');
+    wp_enqueue_style('style', get_stylesheet_uri(), array(), '2.1');
     wp_enqueue_script('bootstrap', THEME_URL . '/js/bootstrap.min.js', array('jquery'), false, true);
     wp_enqueue_script('pressenza', THEME_URL . '/js/pressenza.js', array(), false, true);
 }
