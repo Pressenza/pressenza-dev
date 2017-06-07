@@ -1,0 +1,15 @@
+<div id="articlegallery" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        {% for photo in attachments %}
+            {% if loop.index == 1 %}
+            <div class="item active">
+            {% else %}
+            <div class="item">
+            {% endif %}
+                <img src="{{ TimberImage(photo)|resize(750, 422) }}" alt="{{ TimberImage(photo).title }}">
+            </div>
+        {% endfor %}
+    </div>
+    <a class="left carousel-control" href="#articlegallery" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#articlegallery" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
